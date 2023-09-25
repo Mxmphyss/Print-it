@@ -1,21 +1,27 @@
-const imgArray = document.querySelectorAll(".banner-img");
-const nbLength = imgArray.length;
+const image = document.querySelector("#banner img");
+const tagline = document.querySelector(".tagline");
 let flecheGauche = document.querySelector(".arrow_left");
 let flecheDroite = document. querySelector(".arrow_right");
-let count = 0
+let count = 0;
+
+image.src = 'assets/images/slideshow/'+slides[count].image;
+image.innerHTML = image
+
+tagline.innerHTML = slides[count].tagLine
+
+console.log(tagline)
 
 /* Fleche de droite */
 
 function slideSuivante (){
-    imgArray[count].classList.remove('active');
-
-    if (count < nbLength - 1){
+    if (count < nbSentence - 1){
         count++;
     } else {
         count = 0;
     }
 
-    imgArray[count].classList.add('active')
+    image.src = 'assets/images/slideshow/'+slides[count].image;
+    tagline.innerHTML = slides[count].tagLine;
 }
 
 flecheDroite.addEventListener("click", slideSuivante)
@@ -23,15 +29,14 @@ flecheDroite.addEventListener("click", slideSuivante)
 /* Fleche de Gauche */
 
 function slidePrecedent (){
-    imgArray[count].classList.remove('active');
-
     if (count > 0){
         count--;
     } else {
-        count = nbLength - 1
+        count = nbSentence - 1
     }
 
-    imgArray[count].classList.add('active')
+    image.src = 'assets/images/slideshow/'+slides[count].image;
+    tagline.innerHTML = slides[count].tagLine;
 }
 
 flecheGauche.addEventListener("click", slidePrecedent)
