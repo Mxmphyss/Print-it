@@ -5,7 +5,6 @@ let flecheDroite = document. querySelector(".arrow_right");
 let count = 0;
 
 image.src = 'assets/images/slideshow/'+slides[count].image;
-image.innerHTML = image
 
 tagline.innerHTML = slides[count].tagLine
 

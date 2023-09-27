@@ -16,5 +16,5 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-let sentence = document.querySelector("#banner p")
+
 let nbSentence = slides.length
