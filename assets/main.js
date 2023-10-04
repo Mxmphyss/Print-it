@@ -46,8 +46,10 @@ const bulletArray = document.querySelectorAll(".dot");
 const bulletLength = bulletArray.length;
 let count2 = 0
 
+/* Fleche de Droite */
+
 function bulletRight (){
-    bulletArray[count2].classList.remove('active2');
+    bulletArray[count2].classList.remove('active');
 
     if (count2 < bulletLength - 1){
         count2++;
@@ -55,8 +57,7 @@ function bulletRight (){
         count2 = 0;
     }
 
-    bulletArray[count2].classList.add('active2')
-    console.log(count2)
+    bulletArray[count2].classList.add('active')
 }
 
 flecheDroite.addEventListener("click", bulletRight)
@@ -64,7 +65,7 @@ flecheDroite.addEventListener("click", bulletRight)
 /* Fleche de Gauche */
 
 function slideLeft (){
-    bulletArray[count2].classList.remove('active2');
+    bulletArray[count2].classList.remove('active');
 
     if (count2 > 0){
         count2--;
@@ -72,7 +73,7 @@ function slideLeft (){
         count2 = bulletLength - 1
     }
 
-    bulletArray[count2].classList.add('active2')
+    bulletArray[count2].classList.add('active')
 }
 
 flecheGauche.addEventListener("click", slideLeft)
